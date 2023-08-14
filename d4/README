@@ -1,0 +1,7 @@
+pak0 = The pak0 data (aka "shareware") source
+pak1 = the pak1 data (aka "registered") source
+id1 = unused, for building only
+src_wads = sources of wad files used to compile maps with
+src_qc = quakec source of progs.dat
+src_eng = engine sources
+src_mdl = model sources

@@ -1,0 +1,97 @@
+../..//progs.dat
+
+
+// Legacy "Q" stuff
+
+
+defs.qc
+
+//xdf
+common/xddefs.qc		// New XDBase definitions
+//common/dvdefs.qc		// New DaveXD definitions
+common/axdefs.qc		// New XDtion definitions
+common/vhdefs.qc		// Vehicle code definitions
+// squad
+squad/defs.qc
+//squad/dpex.qc
+
+
+
+
+// gyro
+gyro_main.qc
+gyro_physics.qc
+gyro_forces.qc
+gyro_user.qc
+
+subs/anim.qc			// Animation subroutines
+
+dpextensions.qc
+subs.qc
+fight.qc
+ai.qc
+combat.qc
+items.qc
+
+// MauveBib's Squad Stuff
+squad/waypoint.qc
+squad/editor.qc
+squad/astar.qc
+squad/squad.qc
+
+
+client/weaponmodel.qc		// Client's view model. (Important!)
+
+weapons.qc
+
+world.qc
+client.qc
+player.qc
+monsters.qc
+doors.qc
+buttons.qc
+triggers.qc
+plats.qc
+misc.qc
+
+// XDBase Common Enhancement Stuff
+effects/speaker.qc		// Speakers, ambient noises
+effects/lights.qc		// wacky light effects
+effects/footstep.qc		// footsteps
+effects/mflash.qc		// Muzzleflashes
+
+// Quake's monsters, left in for the fun of it!
+// and coop parties, invasions, etc.
+
+ogre.qc
+demon.qc
+shambler.qc
+knight.qc
+soldier.qc
+wizard.qc
+dog.qc
+zombie.qc
+boss.qc
+
+tarbaby.qc		// registered
+hknight.qc		// registered
+fish.qc			// registered
+shalrath.qc		// registered
+enforcer.qc		// registered
+oldone.qc		// registered
+
+
+// DAVEXD GAME 
+common/veh.qc		// vehicles stuff
+//dave/vehicles.qc	// vehicles defined
+//dave/babe.qc		// titty candy
+//dave/barrels.qc		// bullet explosion fodder
+//squad/soldier.qc	// squad monsters
+//dave/daveguns.qc	// davexd guns
+dave/mouth.qc		// shoot off mouth
+//dave/wrapper.qc		// Function Wrapper
+
+
+// XDTION game
+xdtion/guns.qc		// New guns.
+xdtion/wrapper.qc	// Function Wrapper

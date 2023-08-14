@@ -1,0 +1,1573 @@
+// Simple Bullet Tracer
+
+// the sperk
+effect TE_TRACER
+countabsolute 1
+type spark
+tex 56 57
+color 0xFDFFD9 0xFDFFD9
+size 1 2
+alpha 510 512 4866
+//gravity 1
+gravity 0
+bounce 0
+velocityoffset 0 0 0
+originjitter 0 0 0
+velocitymultiplier 4
+//velocityjitter 255 255 255
+
+// GUN smoke
+
+effect TE_GUNSMORK
+count 2
+type smoke
+//type alpha
+tex 4 8
+color 0x101010 0x202020
+size 2 2
+alpha 0 256 200
+originjitter 1 1 1
+velocityjitter 4 4 7
+sizeincrease 35
+gravity -0.04
+
+
+// 1999 gunsmoke
+
+
+effect TE_GUNSMOKE
+countabsolute 7
+type smoke
+tex 0 2
+color 0xAAAAAA 0xAAAAAA
+size 3 3
+alpha 0 256 260
+originjitter 1 1 0
+velocityjitter 2 2 1
+sizeincrease 8
+gravity -0.04
+
+effect TE_GUNSMOKE
+countabsolute 0.2
+type smoke
+tex 4 8
+color 0xAAAAAA 0xAAAAAA
+size 1 1
+alpha 0 256 160
+originjitter 1 1 3
+velocityjitter 2 2 6
+sizeincrease 32
+gravity -0.02
+
+// Barrles on fire
+
+
+effect EF_FLAME
+countabsolute 2
+type smoke
+tex 0 2
+color 0xFFFFFF 0xFFFFFF
+size 3 3
+alpha 0 256 260
+originjitter 8 8 8
+velocityjitter 2 2 155
+sizeincrease 8
+gravity -0.05
+
+effect EF_FLAME
+countabsolute 2
+type smoke
+tex 12 16
+color 0xFFFFFF 0xFFFFFF
+size 13 13
+alpha 0 256 230
+originjitter 9 9 56
+velocityjitter 2 2 255
+sizeincrease 14
+gravity -0.05
+
+effect EF_FLAME
+countabsolute 5
+type smoke
+tex 0 8
+color 0xCB782F 0xCA4618
+size 10 10
+alpha 0 256 160
+originjitter 16 16 80
+velocityjitter 2 2 555
+sizeincrease 32
+gravity -0.09
+
+
+
+// -------------------------------------
+// Bullet Impact for Shotguns
+// -------------------------------------
+
+effect TE_GUNSHOT
+count 2
+type smoke
+//type alpha
+tex 4 8
+color 0x101010 0x202020
+size 2 2
+alpha 0 256 200
+originjitter 1 1 1
+velocityjitter 4 4 7
+sizeincrease 35
+gravity -0.04
+
+effect TE_GUNSHOT
+count 4
+type smoke
+//type alpha
+tex 4 8
+color 0x101010 0x202020
+size 3 3
+alpha 0 156 100
+originjitter 1 1 1
+velocityjitter 3 3 4
+sizeincrease 35
+gravity -0.04
+
+// the mark
+effect TE_GUNSHOT
+countabsolute 1
+type decal
+blendmode add
+tex 61 61
+size 2 2
+alpha 256 256 0
+originjitter 40 40 40
+
+// the sperk
+effect TE_GUNSHOT
+count 4
+type spark
+tex 56 57
+color 0xFDFFD9 0xFDFFD9
+size 1 2
+alpha 510 512 4866
+//gravity 1
+gravity 0.5
+airfriction 3
+bounce 1
+velocityoffset 0 0 45
+originjitter 1 1 1
+velocityjitter 255 255 255
+velocitymultiplier 65
+
+
+// small sparks
+effect TE_GUNSHOT
+count 8
+type spark
+tex 25 31
+color 0xFDFFD9 0xFDFFD9
+size 3 3
+alpha 510 512 6866
+//gravity 1
+gravity 0.5
+airfriction 3
+bounce 1
+velocityoffset 0 0 45
+originjitter 1 1 1
+velocityjitter 255 255 255
+velocitymultiplier 65
+
+// small sparks that linger a bit longer
+effect TE_GUNSHOT
+count 8
+type smoke
+tex 25 31
+color 0xFDFFD9 0xFDFFD9
+size 3 3
+alpha 510 512 966
+//gravity 1
+gravity 0.2
+airfriction 3
+bounce 1
+velocityoffset 0 0 55
+originjitter 1 1 1
+velocityjitter 155 155 155
+velocitymultiplier 3
+
+
+
+
+// BIG spark
+effect TE_GUNSHOT
+count 4
+type spark
+tex 24 24
+color 0xFDFFD9 0xFDFFD9
+size 1 3
+alpha 510 512 7866
+//gravity 1
+gravity 0
+velocityoffset 0 0 45
+originjitter -1 -1 -1
+velocityjitter 133 155 155
+velocitymultiplier 65
+
+
+
+// smoke
+effect TE_GUNSHOT
+count 4
+type smoke
+tex 0 3
+color 0x525252 0x525252
+size 2 2
+alpha 510 1 666
+//gravity 1
+gravity -0.04
+velocityoffset 0 0 0
+originjitter 0 0 0
+velocityjitter 13 15 13
+sizeincrease 12
+
+
+// -------------------------------------
+// Standard Explosion
+// -------------------------------------
+
+// BIG spark
+effect TE_EXPLOSION
+count 12
+type spark
+tex 24 24
+color 0xFDD4AF 0xFDD4AF
+size 4 8
+alpha 510 512 6566
+//gravity 1
+gravity 0
+velocityoffset 0 0 0
+originjitter -1 -1 -1
+velocityjitter 1833 1885 1855
+velocitymultiplier 65
+sizeincrease 512
+time 0.2 0.2
+lightradius 1300
+lightradiusfade 3200
+lightcolor 3.4 2.2 0.2
+
+
+// big smoke
+effect TE_EXPLOSION
+count 7
+type alphastatic
+tex 50 51
+color 0x0E0E0E 0x181818
+size 32 32
+alpha 755 0 600
+originjitter 0 0 0
+airfriction 2.5
+velocityjitter 355 355 455
+sizeincrease 64
+gravity -0.2
+
+// smaller, thicker smoke
+effect TE_EXPLOSION
+count 32
+type alphastatic
+tex 0 3
+color 0x0E0E0E 0x181818
+size 16 16
+alpha 755 0 200
+originjitter 0 0 0
+airfriction 4
+velocityjitter 155 155 355
+sizeincrease 54
+gravity -0.04
+
+// explo orange
+effect TE_EXPLOSION
+count 24
+type smoke
+tex 48 49
+color 0xFFFFFF 0xFFFFFF
+size 76 76
+alpha 512 0 700
+airfriction 8
+originjitter 8 8 8
+velocityjitter 655 655 655
+sizeincrease 34
+gravity -0.04
+
+// Big Huge Shockwave
+effect TE_EXPLOSION
+count 3
+type smoke
+tex 52 52
+color 0xFFFFFF 0xFFFFFF
+size 16 16
+alpha 512 0 600
+airfriction 0
+originjitter 0 0 0
+velocityjitter 0 0 0
+sizeincrease 128
+gravity 0
+
+effect TE_EXPLOSION
+count 24
+type smoke
+tex 48 49
+color 0xFFFFFF 0xFFFFFF
+size 32 32
+alpha 512 0 700
+airfriction 5
+originjitter 8 8 8
+velocityjitter 455 455 455
+sizeincrease 45
+gravity -0.04
+
+
+effect TE_EXPLOSION
+count 1
+type smoke
+tex 46 46
+color 0xFFFFFF 0xFFFFFF
+size 256 256
+alpha 512 0 200
+originjitter 0 0 0
+velocityjitter 0 0 0
+gravity 0
+bounce 0
+
+effect TE_EXPLOSION
+count 47
+type smoke
+tex 25 31
+color 0xECBB90 0xFA7600
+size 16 16
+alpha 512 0 900
+airfriction 3
+originjitter 8 8 8
+velocityjitter 655 655 755
+
+gravity 0.5
+
+
+// the sperk
+effect TE_EXPLOSION
+count 65
+type spark
+tex 56 57
+color 0xFDFFD9 0xFDFFD9
+size 1 2
+alpha 510 512 453
+//gravity 1
+gravity 0.5
+airfriction 3
+bounce 1
+velocityoffset 0 0 85
+originjitter 1 1 1
+velocityjitter 1255 1255 1255
+velocitymultiplier 65
+
+// -------------------------------------
+// Nerve Gas
+// -------------------------------------
+
+// big gas truck
+effect TE_LAVASPLASH
+count 32
+type alphastatic
+tex 42 45
+color 0xFFFFFF 0xFFFFFF
+size 16 16
+alpha 755 0 100
+originjitter 0 0 0
+velocityjitter 95 95 65
+sizeincrease 77
+gravity -0.02
+
+// smaller gas
+effect TE_LAVASPLASH
+count 16
+type alphastatic
+tex 42 45
+color 0xFFFFFF 0xFFFFFF
+size 8 8
+alpha 755 0 100
+originjitter 0 0 0
+velocityjitter 55 55 35
+sizeincrease 43
+gravity -0.02
+
+// -------------------------------------
+// Rain
+// -------------------------------------
+
+effect PT_RAIN
+count 2
+type smoke
+//type alpha
+tex 4 8
+color 0x101010 0x202020
+size 2 2
+alpha 0 256 200
+originjitter 1 1 1
+velocityjitter 4 4 7
+sizeincrease 35
+gravity -0.04
+
+// -------------------------------------
+// Blood Trail
+// -------------------------------------
+
+effect TR_BLOOD
+trailspacing 16
+type blood
+color 0xFFFFFF 0xFFFFFF
+tex 24 32
+size 8 8
+alpha 384 384 192
+bounce -1
+airfriction 1
+liquidfriction 4
+velocityjitter 64 64 64
+velocitymultiplier 0.5
+
+effect TR_SLIGHTBLOOD
+trailspacing 32
+type blood
+color 0xFFFFFF 0xFFFFFF
+tex 24 32
+size 8 8
+alpha 384 384 192
+bounce -1
+airfriction 1
+liquidfriction 4
+velocityjitter 64 64 64
+velocitymultiplier 0.5
+// -------------------------------------
+// I'M ON FIRE!!! Trail
+// -------------------------------------
+
+// big flame
+effect TR_VORESPIKE
+count 2
+notunderwater
+type smoke
+tex 8 11
+color 0xFFFFFF 0xFFFFFF
+size 16 16
+alpha 755 0 4250
+originjitter 12 12 24
+velocityjitter 6 4 17
+sizeincrease 2
+gravity -0.02
+
+// smaller cute flame
+effect TR_VORESPIKE
+count 38
+notunderwater
+type smoke
+tex 12 15
+color 0xFFFFFF 0xFFFFFF
+size 12 12
+alpha 755 0 2700
+originjitter 24 24 46
+velocityjitter 12 12 85
+sizeincrease 12
+gravity -0.1
+
+//
+
+
+// -------------------------------------
+// Railgun (no not like Quake2) trail
+// -------------------------------------
+
+// ringy
+effect TR_KNIGHTSPIKE
+count 12
+type smoke
+trailspacing 3
+tex 52 55
+color 0xFFFFFF 0xFFFFFF
+size 1 1
+alpha 512 0 550
+originjitter 0 0 0
+velocityjitter 4 4 8
+sizeincrease 12
+gravity -0.07
+
+// ringy
+effect TR_KNIGHTSPIKE
+count 4
+type smoke
+trailspacing 1
+tex 0 3
+color 0xFFFFFF 0xFFFFFF
+size 1 1
+alpha 512 0 1850
+originjitter 0 0 0
+velocityjitter 0 0 3
+sizeincrease 3
+gravity -0.02
+
+
+// -------------------------------------
+// Rocket Trail
+// -------------------------------------
+
+// TODO: REAL proper dynamic light for this
+//effect TR_ROCKET
+//lightradius 500
+//lightradiusfade 1200
+//lightcolor 1 1 0.8
+
+
+effect TR_ROCKET
+count 1
+type alphastatic
+trailspacing 2
+tex 0 3
+color 0xFFFFFF 0xFFFFFF
+size 8 8
+alpha 256 0 450
+originjitter 0 0 0
+velocityjitter 12 12 12
+airfriction 2
+sizeincrease 24
+gravity -0.05
+velocitymultiplier -0.07
+
+// ringy
+effect TR_ROCKET
+count 2
+type alphastatic
+trailspacing 1
+tex 4 7
+color 0xFFFFFF 0xFFFFFF
+size 1 1
+alpha 256 0 350
+originjitter 0 0 0
+velocityjitter 52 52 52
+airfriction 4
+sizeincrease 17
+gravity -0.02
+velocitymultiplier -0.21
+
+// small sparks
+effect TR_ROCKET
+count 7
+type spark
+tex 25 31
+color 0xFDFFD9 0xFDFFD9
+size 4 4 
+alpha 510 512 2866
+//gravity 1
+gravity 0.5
+velocityoffset 0 0 0
+originjitter 0 0 0
+velocityjitter 94 94 94
+velocitymultiplier -0.3
+
+
+// engine flarish sparky
+effect TR_ROCKET
+count 2
+type spark
+tex 24 24
+color 0xFDFFD9 0xFDFFD9
+size 1 2
+alpha 510 512 9866
+//gravity 1
+gravity 0
+velocityoffset 0 0 45
+originjitter -1 -1 -1
+velocityjitter 133 155 155
+velocitymultiplier 0
+
+
+
+// FLAME BURST
+
+
+// explo orange
+effect TE_FLAMA
+count 1
+type smoke
+tex 48 49
+color 0xFFFFFF 0xFFFFFF
+size 1 1
+alpha 512 0 600
+airfriction 0.4
+originjitter 0 0 0
+velocityoffset 0 0 0
+velocityjitter 8 8 8
+sizeincrease 64
+velocitymultiplier 1.7
+gravity -0.05
+
+// explo orange
+effect TE_FLAMA
+count 1
+type smoke
+tex 48 49
+color 0xFFFFFF 0xFFFFFF
+size 1 1
+alpha 512 0 600
+airfriction 1
+originjitter 0 0 0
+velocityoffset 0 0 0
+velocityjitter 8 8 8
+sizeincrease 64
+velocitymultiplier 0.5
+gravity -0.05
+
+// explo orange
+effect TE_FLAMA
+count 1
+type smoke
+tex 48 49
+color 0xFFFFFF 0xFFFFFF
+size 1 1
+alpha 512 0 600
+airfriction 0.3
+originjitter 0 0 0
+velocityoffset 0 0 0
+velocityjitter 8 8 8
+sizeincrease 64
+velocitymultiplier 0.7
+gravity -0.05
+
+// explo orange
+effect TE_FLAMA
+count 1
+type smoke
+tex 48 49
+color 0xFFFFFF 0xFFFFFF
+size 1 1
+alpha 512 0 600
+airfriction 0.4
+originjitter 0 0 0
+velocityoffset 0 0 0
+velocityjitter 8 8 8
+sizeincrease 64
+velocitymultiplier 0.9
+gravity -0.05
+
+// explo orange
+effect TE_FLAMA
+count 1
+type smoke
+tex 48 49
+color 0xFFFFFF 0xFFFFFF
+size 1 1
+alpha 512 0 600
+airfriction 0.6
+originjitter 0 0 0
+velocityoffset 0 0 0
+velocityjitter 8 8 8
+sizeincrease 64
+velocitymultiplier 0.8
+gravity -0.05
+
+
+
+
+
+effect TE_FLAMA
+count 1
+type smoke
+tex 48 49
+color 0xFFFFFF 0xFFFFFF
+size  1 1
+alpha 512 0 600
+airfriction 1
+originjitter 0 0 0
+velocityoffset 0 0 0
+velocityjitter 8 8 8
+sizeincrease 47
+velocitymultiplier 2
+gravity -0.05
+
+effect TE_FLAMA
+count 1
+type smoke
+tex 48 49
+color 0xFFFFFF 0xFFFFFF
+size 2 2
+alpha 512 0 900
+airfriction 1
+originjitter 0 0 0
+velocityoffset 0 0 0
+velocityjitter 8 8 8
+sizeincrease 38
+velocitymultiplier 1.4
+gravity -0.05
+
+effect TE_FLAMA
+count 1
+type smoke
+tex 48 49
+color 0xFFFFFF 0xFFFFFF
+size 2 2
+alpha 512 0 200
+airfriction 1
+originjitter 0 0 0
+velocityoffset 0 0 0
+velocityjitter 8 8 8
+sizeincrease 32
+velocitymultiplier 1.5
+gravity -0.05
+
+
+effect TE_FLAMA
+count 1
+type smoke
+tex 12 15
+color 0xFFFFFF 0xFFFFFF
+size 2 2
+alpha 512 0 400
+airfriction 1
+originjitter 0 0 0
+velocityoffset 0 0 0
+velocityjitter 8 8 8
+sizeincrease 43
+velocitymultiplier 2
+gravity -0.09
+
+effect TE_FLAMA
+count 1
+type smoke
+tex 12 15
+color 0xFFFFFF 0xFFFFFF
+size 2 2
+alpha 512 0 400
+airfriction 1
+originjitter 0 0 0
+velocityoffset 0 0 0
+velocityjitter 8 8 8
+sizeincrease 43
+velocitymultiplier 2.2
+gravity -0.09
+
+effect TE_FLAMA
+count 1
+type smoke
+tex 12 15
+color 0xFFFFFF 0xFFFFFF
+size 2 2
+alpha 512 0 400
+airfriction 1
+originjitter 0 0 0
+velocityoffset 0 0 0
+velocityjitter 8 8 8
+sizeincrease 43
+velocitymultiplier 2.1
+gravity -0.09
+
+effect TE_FLAMA
+count 1
+type smoke
+tex 12 15
+color 0xFFFFFF 0xFFFFFF
+size 2 2
+alpha 512 0 400
+airfriction 1
+originjitter 0 0 0
+velocityoffset 0 0 0
+velocityjitter 8 8 8
+sizeincrease 43
+velocitymultiplier 2.31
+gravity -0.09
+
+effect TE_FLAMA
+count 1
+type smoke
+tex 12 15
+color 0xFFFFFF 0xFFFFFF
+size 2 2
+alpha 512 0 400
+airfriction 1
+originjitter 0 0 0
+velocityoffset 0 0 0
+velocityjitter 8 8 8
+sizeincrease 43
+velocitymultiplier 1.87
+gravity -0.09
+
+effect TE_FLAMA
+count 1
+type smoke
+tex 12 15
+color 0xFFFFFF 0xFFFFFF
+size 2 2
+alpha 512 0 400
+airfriction 1
+originjitter 0 0 0
+velocityoffset 0 0 0
+velocityjitter 8 8 8
+sizeincrease 43
+velocitymultiplier 1.75
+gravity -0.09
+
+effect TE_FLAMA
+count 1
+type smoke
+tex 12 15
+color 0xFFFFFF 0xFFFFFF
+size 2 2
+alpha 512 0 400
+airfriction 1
+originjitter 0 0 0
+velocityoffset 0 0 0
+velocityjitter 8 8 8
+sizeincrease 43
+velocitymultiplier 1.62
+gravity -0.09
+
+effect TE_FLAMA
+count 1
+type smoke
+tex 12 15
+color 0xFFFFFF 0xFFFFFF
+size 2 2
+alpha 512 0 400
+airfriction 1
+originjitter 0 0 0
+velocityoffset 0 0 0
+velocityjitter 8 8 8
+sizeincrease 43
+velocitymultiplier 1.46
+gravity -0.09
+
+effect TE_FLAMA
+count 1
+type smoke
+tex 12 15
+color 0xFFFFFF 0xFFFFFF
+size 2 2
+alpha 512 0 400
+airfriction 1
+originjitter 0 0 0
+velocityoffset 0 0 0
+velocityjitter 8 8 8
+sizeincrease 43
+velocitymultiplier 1.32
+gravity -0.09
+
+effect TE_FLAMA
+count 1
+type smoke
+tex 12 15
+color 0xFFFFFF 0xFFFFFF
+size 2 2
+alpha 512 0 400
+airfriction 1
+originjitter 0 0 0
+velocityoffset 0 0 0
+velocityjitter 8 8 8
+sizeincrease 43
+velocitymultiplier 1.12
+gravity -0.09
+
+effect TE_FLAMA
+count 1
+type smoke
+tex 12 15
+color 0xFFFFFF 0xFFFFFF
+size 2 2
+alpha 512 0 400
+airfriction 1
+originjitter 0 0 0
+velocityoffset 0 0 0
+velocityjitter 8 8 8
+sizeincrease 43
+velocitymultiplier 0.8
+gravity -0.09
+
+effect TE_FLAMA
+count 1
+type smoke
+tex 12 15
+color 0xFFFFFF 0xFFFFFF
+size 2 2
+alpha 512 0 400
+airfriction 1
+originjitter 0 0 0
+velocityoffset 0 0 0
+velocityjitter 8 8 8
+sizeincrease 43
+velocitymultiplier 1.3
+gravity -0.09
+effect TE_FLAMA
+count 1
+type smoke
+tex 12 15
+color 0xFFFFFF 0xFFFFFF
+size 2 2
+alpha 512 0 400
+airfriction 1
+originjitter 0 0 0
+velocityoffset 0 0 0
+velocityjitter 8 8 8
+sizeincrease 43
+velocitymultiplier 1.5
+gravity -0.09
+
+effect TE_FLAMA
+count 1
+type spark
+tex 12 15
+color 0xFFFFFF 0xFFFFFF
+size 2 2
+alpha 512 0 200
+airfriction 1
+originjitter 0 0 0
+velocityoffset 0 0 0
+velocityjitter 0 0 0 
+sizeincrease 32
+velocitymultiplier 2.3
+gravity -0.09
+
+effect TE_FLAMA
+count 1
+type spark
+tex 12 15
+color 0xFFFFFF 0xFFFFFF
+size 2 2
+alpha 512 0 200
+airfriction 1
+originjitter 0 0 0
+velocityoffset 0 0 0
+velocityjitter 0 0 0 
+sizeincrease 32
+velocitymultiplier 1.5
+gravity -0.09
+effect TE_FLAMA
+count 1
+type spark
+tex 12 15
+color 0xFFFFFF 0xFFFFFF
+size 1 1
+alpha 512 0 200
+airfriction 1
+originjitter 0 0 0
+velocityoffset 0 0 0
+velocityjitter 0 0 0 
+sizeincrease 32
+velocitymultiplier 2.8
+gravity -0.09
+effect TE_FLAMA
+count 1
+type spark
+tex 12 15
+color 0xFFFFFF 0xFFFFFF
+size 1 1
+alpha 512 0 200
+airfriction 1
+originjitter 0 0 0
+velocityoffset 0 0 0
+velocityjitter 0 0 0 
+sizeincrease 32
+velocitymultiplier 0.7
+gravity -0.09
+effect TE_FLAMA
+count 1
+type spark
+tex 12 15
+color 0xFFFFFF 0xFFFFFF
+size 1 1
+alpha 512 0 200
+airfriction 1
+originjitter 0 0 0
+velocityoffset 0 0 0
+velocityjitter 0 0 0 
+sizeincrease 32
+velocitymultiplier 0.9
+gravity -0.09
+effect TE_FLAMA
+count 1
+type spark
+tex 12 15
+color 0xFFFFFF 0xFFFFFF
+size 1 1
+alpha 512 0 200
+airfriction 1
+originjitter 0 0 0
+velocityoffset 0 0 0
+velocityjitter 0 0 0 
+sizeincrease 12
+velocitymultiplier 1.2
+gravity -0.09
+effect TE_FLAMA
+count 1
+type spark
+tex 12 15
+color 0xFFFFFF 0xFFFFFF
+size 1 1
+alpha 512 0 200
+airfriction 1
+originjitter 0 0 0
+velocityoffset 0 0 0
+velocityjitter 0 0 0 
+sizeincrease 12
+velocitymultiplier 0.2
+gravity -0.09
+
+// spark of ignite
+
+effect TE_FLAMA
+count 16
+type spark
+tex 56 57
+color 0xFDFFD9 0xFDFFD9
+size 0.2 0.2
+alpha 512 0 6200
+originjitter 0 0 0
+velocityoffset 0 0 0
+velocityjitter 34 34 34
+sizeincrease 32
+velocitymultiplier 0.4
+gravity 0.3
+
+
+
+// ENGINES
+
+// smoke
+effect TE_BLUEENGINE
+count 2
+type smoke
+tex 0 3
+color 0x307EC6 0x307EC6
+size 16 16
+alpha 510 1 1666
+//gravity 1
+gravity -0.07
+velocityoffset 0 0 0
+originjitter 0 0 0
+velocityjitter 85 85 85
+sizeincrease 12
+
+// nex beam: bright core
+effect nex_beam
+trailspacing 6
+color 0xFF6F05 0xFF6F05
+size 32 32
+tex 63 63
+alpha 256 256 780
+type smoke
+
+// smoke
+effect TE_BEAMHIT
+count 24
+type smoke
+tex 0 3
+color 0xFF6F05 0xFF6F05
+size 32 32
+alpha 510 1 466
+//gravity 1
+gravity -0.07
+velocityoffset 0 0 43
+originjitter 2 2 2
+velocityjitter 85 85 233
+sizeincrease 67
+lightradius 1300
+lightradiusfade 600
+lightcolor 2.4 1.2 0.2
+
+// explo orange
+effect TE_BEAMHIT
+count 8
+type smoke
+tex 48 49
+color 0xFFFFFF 0xFFFFFF
+size 76 76
+alpha 512 0 700
+airfriction 8
+originjitter 8 8 8
+velocityjitter 655 655 655
+sizeincrease 34
+gravity -0.04
+
+effect TE_BEAMHIT
+count 4
+type smoke
+tex 0 3
+color 0xFF6F05 0xFF6F05
+size 48 48
+alpha 510 1 1266
+//gravity 1
+gravity -0.07
+velocityoffset 0 0 43
+originjitter 2 2 2
+velocityjitter 285 285 285
+sizeincrease 256
+
+// -------------------------------------
+// Vehicle's final explosion
+// -------------------------------------
+
+// BIG spark
+effect TE_BIGBOOM
+count 12
+type spark
+tex 24 24
+color 0xFDD4AF 0xFDD4AF
+size 4 8
+alpha 510 512 5566
+//gravity 1
+gravity 0
+velocityoffset 0 0 0
+originjitter -1 -1 -1
+velocityjitter 2833 2885 2855
+velocitymultiplier 65
+sizeincrease 512
+time 0.2 0.2
+
+// big smoke
+effect TE_BIGBOOM
+count 7
+type alphastatic
+tex 50 51
+color 0x0E0E0E 0x181818
+size 32 32
+alpha 755 0 200
+originjitter 0 0 0
+airfriction 2.5
+velocityjitter 655 655 255
+sizeincrease 64
+gravity -0.2
+
+effect TE_BIGBOOM
+count 4
+type alphastatic
+tex 50 51
+color 0x0E0E0E 0x181818
+size 64 64
+alpha 755 0 100
+originjitter 0 0 0
+airfriction 3
+velocityjitter 4155 4155 155
+sizeincrease 256
+gravity -0.3
+
+
+// shockwave effect
+effect TE_BIGBOOM
+count 1
+type smoke
+tex 50 51
+color 0xFFFF00 0xFFFF00
+size 4 4
+alpha 755 0 800
+originjitter 0 0 0
+velocityjitter 0 0 0
+sizeincrease 512
+gravity -0.3
+
+effect TE_BIGBOOM
+count 64
+type smoke
+tex 50 51
+color 0x64340A 0x64340A
+size 64 64
+alpha 755 0 600
+originjitter 0 0 0
+airfriction 8
+velocityjitter 7155 7155 3455
+sizeincrease 256
+
+effect TE_BIGBOOM
+count 32
+type smoke
+tex 50 51
+color 0x64340A 0x64340A
+size 64 64
+alpha 755 0 600
+originjitter 0 0 74
+airfriction 8
+velocityjitter 655 655 6455
+sizeincrease 256
+
+// small sparks
+effect TE_BIGBOOM
+count 256
+type spark
+tex 25 31
+color 0xFDFFD9 0xFDFFD9
+size 12 12
+alpha 510 512 366
+//gravity 1
+gravity 0.5
+airfriction 3
+bounce 1
+velocityoffset 0 0 244
+originjitter 1 1 1
+velocityjitter 8455 8155 4455
+
+// small sparks that linger a bit longer
+effect TE_BIGBOOM
+count 128
+type smoke
+tex 25 31
+color 0xFDFFD9 0xFDFFD9
+size 12  12
+alpha 510 512 66
+//gravity 1
+gravity 0.8
+airfriction 2
+bounce 1
+velocityoffset 0 0 125
+originjitter 32 32 32
+velocityjitter 8455 8155 4455
+velocitymultiplier 3
+
+// smaller, thicker smoke
+effect TE_BIGBOOM
+count 32
+type alphastatic
+tex 0 3
+color 0x0E0E0E 0x181818
+size 16 16
+alpha 755 0 100
+originjitter 0 0 0
+airfriction 4
+velocityjitter 355 355 655
+sizeincrease 54
+gravity -0.04
+
+// explo orange
+effect TE_BIGBOOM
+count 24
+type smoke
+tex 48 49
+color 0xFFFFFF 0xFFFFFF
+size 76 76
+alpha 512 0 200
+airfriction 8
+originjitter 8 8 8
+velocityjitter 755 955 955
+sizeincrease 34
+gravity -0.04
+lightradius 5300
+lightradiusfade 800
+lightcolor 4.4 3.2 2.2
+
+
+effect TE_BIGBOOM
+count 24
+type smoke
+tex 48 49
+color 0xFFFFFF 0xFFFFFF
+size 32 32
+alpha 512 0 200
+airfriction 5
+originjitter 8 8 8
+velocityjitter 655 655 955
+sizeincrease 45
+gravity -0.04
+
+
+effect TE_BIGBOOM
+count 1
+type smoke
+tex 46 46
+color 0xFFFFFF 0xFFFFFF
+size 256 256
+alpha 512 0 100
+originjitter 0 0 0
+velocityjitter 0 0 0
+gravity 0
+bounce 0
+
+effect TE_BIGBOOM
+count 47
+type smoke
+tex 25 31
+color 0xECBB90 0xFA7600
+size 16 16
+alpha 512 0 200
+airfriction 3
+originjitter 8 8 8
+velocityjitter 1255 1255 1255
+
+gravity 0.5
+
+
+// the sperk
+effect TE_BIGBOOM
+count 65
+type spark
+tex 56 57
+color 0xFDFFD9 0xFDFFD9
+size 1 2
+alpha 510 512 253
+//gravity 1
+gravity 0.5
+airfriction 3
+bounce 1
+velocityoffset 0 0 85
+originjitter 1 1 1
+velocityjitter 3255 3255 3255
+velocitymultiplier 65
+
+// Just chunks
+
+effect TE_CHUNKS_SPARKS
+count 1
+type smoke
+tex 63 63
+color 0x101010 0x202020
+size 2 2
+alpha 0 256 100
+originjitter 23 23 23
+velocityjitter 800 800 800
+gravity 0.6
+
+effect TE_CHUNKS_DEBRIS
+count 3
+type alphastatic
+tex 58 58
+color 0x000000 0x000000
+size 32 32
+alpha 0 256 100
+originjitter 23 23 23
+velocityjitter 500 500 500
+gravity 2
+
+// -------------------------------------
+// I'M ON FIRE!!! Trail
+// -------------------------------------
+
+// big flame
+effect TR_WIZSPIKE
+count 2
+notunderwater
+type smoke
+tex 8 11
+color 0xFFFFFF 0xFFFFFF
+size 32 32
+alpha 755 0 1250
+originjitter 200 200 128
+velocityjitter 6 4 86
+sizeincrease 2
+gravity -0.02
+
+// smaller cute flame
+effect TR_WIZSPIKE
+count 38
+notunderwater
+type smoke
+tex 12 15
+color 0xFFFFFF 0xFFFFFF
+size 24 24
+alpha 755 0 1700
+originjitter 200 200 128
+velocityjitter 12 12 211
+sizeincrease 12
+gravity -0.1
+
+//
+
+// Blood FX
+
+// big smoke
+effect TE_BLOODGUSH
+count 4
+type alphastatic
+tex 36 40
+color 0xFFFFFF 0xFFFFFF
+size 8 8
+alpha 755 0 1200
+originjitter 0 0 0
+
+velocityjitter 255 355 355
+sizeincrease 12
+gravity 2
+
+
+effect TE_BLOODSPURT
+count 6
+type alphastatic
+tex 36 40
+color 0xFFFFFF 0xFFFFFF
+size 4 4
+alpha 755 0 600
+originjitter 0 0 0
+
+velocityjitter 155 155 155
+sizeincrease 3
+gravity 3
+
+effect TE_BLOODDRIP
+count 3
+type alphastatic
+tex 36 40
+color 0xFFFFFF 0xFFFFFF
+size 6 6
+alpha 755 0 700
+originjitter 0 0 0
+velocityjitter 55 55 5
+gravity 4
+
+
+// BLOOD PUFF
+
+// small dripping
+effect TE_BLOODPUFF
+count 4
+type spark
+tex 32 40
+color 0xFFFFFF 0xFFFFFF
+size 5 7
+blend alpha
+alpha 510 512 466
+//gravity 1
+gravity 1.3
+airfriction 2
+bounce 1
+velocityoffset 0 0 45
+originjitter 1 1 1
+velocityjitter 355 355 355
+velocitymultiplier 1
+liquidfriction 15
+
+// small sparks that linger a bit longer
+effect TE_BLOODPUFF
+count 4
+type alphastatic
+tex 36 40
+color 0xFFFFFF 0xFFFFFF
+size 3 3
+alpha 510 512 566
+//gravity 1
+gravity 1
+airfriction 3
+bounce 1
+velocityoffset 0 0 33
+originjitter 1 1 1
+velocityjitter 155 155 155
+velocitymultiplier 1
+liquidfriction 9
+
+// small sparks that linger a bit longer
+effect TE_BLOODPUFF
+count 3
+type alphastatic
+tex 36 40
+color 0xFFFFFF 0xFFFFFF
+size 4 12
+alpha 510 512 966
+//gravity 1
+gravity 1
+airfriction 3
+bounce 1
+velocityoffset 0 0 33
+originjitter 1 1 1
+velocityjitter 155 155 155
+velocitymultiplier 1
+liquidfriction 17
+
+
+
+// BIG spark
+effect TE_BLOODPUFF
+countabsolute 4
+type spark
+blend alpha
+tex 32 35
+color 0xFFFFFF 0xFFFFFF
+size 3 6
+alpha 510 512 7866
+//gravity 1
+gravity 0
+velocityoffset 0 0 0
+originjitter -1 -1 -1
+velocityjitter 133 155 155
+liquidfriction 14
+
+
+ // the mark
+effect TE_BLOODPUFF
+countabsolute 1
+type decal
+blendmode add
+tex 40 41
+size 3 16
+alpha 256 256 0
+blend alpha
+originjitter 40 40 40
+
+
+// Gib Trailling
+
+// BLOOD PUFF
+
+// small dripping
+effect TR_SLIGHTBLOOD
+count 1
+type spark
+tex 32 40
+color 0xFFFFFF 0xFFFFFF
+size 2 4
+blend alpha
+alpha 510 512 266
+//gravity 1
+gravity 1.2
+airfriction 4
+bounce 1
+velocityoffset 0 0 45
+originjitter 1 1 1
+velocityjitter 35 35 35
+velocitymultiplier -1.7
+liquidfriction 15
+
+effect TR_SLIGHTBLOOD
+count 0.2
+type spark
+tex 32 40
+color 0xFFFFFF 0xFFFFFF
+size 5 7
+blend alpha
+alpha 510 512 266
+//gravity 1
+gravity 1
+airfriction 2
+bounce 1
+velocityoffset 0 0 45
+originjitter 1 1 1
+velocityjitter 15 15 15
+velocitymultiplier -2.5
+liquidfriction 15
+
+// spurting
+
+effect TR_SLIGHTBLOOD
+count 0.5
+type alphastatic
+tex 36 40
+color 0xFFFFFF 0xFFFFFF
+size 4 8
+alpha 510 512 966
+//gravity 1
+gravity 1
+airfriction 3
+bounce 1
+velocityoffset 0 0 33
+originjitter 1 1 1
+velocityjitter 11 11 11
+velocitymultiplier 2
+liquidfriction 17
+
+
+effect TR_BLOOD
+countabsolute 1
+type smoke
+tex 0 2
+color 0xAAAAAA 0xAAAAAA
+size 3 3
+alpha 0 256 260
+originjitter 1 1 0
+velocityjitter 2 2 1
+sizeincrease 8
+gravity -0.04
+ 

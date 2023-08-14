@@ -1,0 +1,57 @@
+Name: Take
+Goal: Efficient software/GL "feature" engine with an emphasis for the features in software renderer, and 486 optimization hacks
+Target platform: DOS, Win32, Linux
+Base: QIP engine, CleanQuake
+
+TODOS:
+- = not done yet
+* = in progress
+/ = COM PLEETED
+
+Version 1
+/ no pop.lmp check
+/ Old threatening quit messages
+/ get -sndspeed working again (Sound frequency)
+- Variable lightmap update delays (for relieving strains on 486s/early Pentiums)
+
+Version 2
+- Remove .ms2 meshing
+- Move the "Quake" trademark name to an alterable string that can be changed on the fly so there is no hardcoded trademark brand names
+- Menu background brown tint
+- Implement different gun bobbing option (rip from Darkplaces)
+* Double pixel size horizontal or vertical in 3d viewport
+- Particle quality cvar (adjust amount of particles spawned)
+
+Version 3
+- Map lists (if maplist.txt is available, use that map list only for multiplayer map selection)
+- Fix the wacky Win32 issue on newer machines that cause Win2k/XP to be oldschool looking and resizing all windows when in fullscreen (and that input delay issue on ATI cards as well)
+
+Version 4
+- Implement EF_ADDITIVE (with additive blending) in both GL and software
+- Implement EF_FULLBRIGHT in both GL and software
+- Interpolation option (rip from ToChriS)
+- HL BSP loading (recoloring textures on load to the Quake palette on the fly in software)
+- Skyboxes option (rip from ToChriS or Quake2)
+
+Version 5
+- Implement .alpha in both GL and software
+- Implement .scale in both GL and software
+- MD3 rendering (gl and software, optional low precision transform (for 486), rip from FTEQW)
+- MD3 tags support (the toughest feature on this list)
+- Downcolor any external 24/32bit textures to 8bit color on load (skyboxes, md3 skins)
+- Implement modplug library for win32/linux platform (fake cdtracks as modules, rip from Darkplaces)
+- Implement GL vertex BSP lighting (for single TMU cards, PowerVR PCX-2s and 486s, rip from mhQuake 5)
+- Implement fog! IN SOFTWARE MODE TOO!!! (hey Laser Arena pulled it off somehow)
+- Implement an all-new Half-Life-style (world space or view space scale) sprite coronas rendering extension, for software mode as well (and then get lordhavoc to adopt this into DP because I hate that generic glow corona)
+- Get this to compile for Win16 somehow (that's right, Windows 3.1 support)
+- ^ Do all this for the Quakeworld client too ^
+
+
+Version 6
+- Randomized pitch of sounds on playback
+  - Rates to variate between are defined in .pit files (i.e. sound/weapons/sgun1.pit) like:
+		sgun1.wav 15350 21000
+	to randomize between 15350Hz and 21000Hz.
+	(and also being able to redirect sounds for more pitch variations using the same sound)
+- Optional, typical BUILD game style hud
+- Implement MIDI playback support for Windows, DOS (Tie into Allegro? MIDIER?) and Linux

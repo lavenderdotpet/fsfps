@@ -1,0 +1,5 @@
+exec default.cfg
+exec config.cfg
+exec autoexec.cfg
+cd play 1
+stuffcmds
